@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/llInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:id="@+id/ivCategory"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:textSize="18dp"
+                android:textColor="@color/grey"
+                android:id="@+id/tvTopicName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="50dp"
+                android:layout_toRightOf="@+id/ivCategory"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/biko_regular_400" />
+
+            <ImageView
+                android:background="@drawable/round_border_square_green"
+                android:padding="2dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_arrow_right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/dgreen" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:background="#bebebe"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+</RelativeLayout>

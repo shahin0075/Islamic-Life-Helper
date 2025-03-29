@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ltwhite">#f6f4f5</color>
+    <color name="grey">#444f50</color>
+    <color name="ltgray">#444f50</color>
+    <color name="black">#ff000000</color>
+    <color name="green">#1ca498</color>
+    <color name="dgreen">#07443d</color>
+    <color name="white">#ffffffff</color>
+    <color name="ltgrey">#aa9b8e</color>
+    <color name="white2">#dfdbda</color>
+</resources>

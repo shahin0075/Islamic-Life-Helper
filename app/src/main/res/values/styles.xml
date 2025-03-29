@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.IslamicDua" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorAccent">@color/grey</item>
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/white</item>
+    </style>
+
+
+    <style name="ToolbarStyle" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">#202020</item>
+        <item name="colorControlNormal">#202020</item>
+    </style>
+</resources>

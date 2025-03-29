@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Islamic Life Helper</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+<!--    <string name="map_key">AIzaSyAfsnWRYxf6MduXV89W5lnjA5DhcBVnDHY</string>-->
+    <string name="map_key">AIzaSyBsPsKntpOiU__u-mIABxL7aunWwap2drs</string>
+</resources>

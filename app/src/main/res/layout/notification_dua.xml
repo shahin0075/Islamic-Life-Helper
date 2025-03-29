@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@color/grey"
+            android:id="@+id/tvDua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dua"
+            android:fontFamily="@font/biko_regular_400" />
+
+        <TextView
+            android:textColor="@color/grey"
+            android:id="@+id/tvDuaTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dua transalation"
+            android:fontFamily="@font/biko_regular_400" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="end"
+        android:id="@+id/btnView"
+        android:background="@drawable/round_corner_square"
+        android:padding="5dp"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View"
+            android:fontFamily="@font/biko_regular_400" />
+    </LinearLayout>
+</LinearLayout>

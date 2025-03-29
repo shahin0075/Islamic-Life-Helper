@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:layout_margin="12dp">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/exit_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_exit" />
+
+        <TextView
+            android:textSize="18dp"
+            android:textColor="#444f50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you sure you want to EXIT?"
+            android:fontFamily="@font/biko_regular_400" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/lin_exit_yes"
+                android:background="@drawable/round_corner_square_5"
+                android:layout_width="110dp"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes, Exit"
+                    android:fontFamily="@font/biko_regular_400" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/lin_exit_no"
+                android:background="@drawable/round_corner_square_5"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="25dp">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Now"
+                    android:fontFamily="@font/biko_regular_400" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/exit_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/star_rate" />
+
+        <TextView
+            android:textSize="17dp"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Please rate our this app."
+            android:fontFamily="@font/biko_regular_400" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/lin_rateus"
+            android:background="#ffffff"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="#444f50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate Us"
+                android:fontFamily="@font/biko_regular_400" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

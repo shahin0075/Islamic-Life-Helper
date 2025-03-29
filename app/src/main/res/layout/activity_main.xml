@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/banner1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.55"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="35dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="DO">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img_bg_top" />
+
+                                <androidx.appcompat.widget.Toolbar
+                                    android:id="@+id/toolbar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:layout_marginTop="35dp"
+                                    android:theme="@style/ToolbarStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/toolbar"
+                                    android:layout_weight="0.55"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:paddingStart="15dp"
+                                    android:paddingEnd="15dp"
+                                    android:paddingBottom="35dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/biko_regular_400"
+                                        android:text="Welcome"
+                                        android:textColor="@color/ltgrey" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/kingthings_exeter"
+                                        android:text="Islamic Life Helper"
+                                        android:textColor="#444f50"
+                                        android:textSize="28sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:fontFamily="@font/biko_regular_400"
+                                        android:text="All the prayers in this have been\ntaken from quran."
+                                        android:textColor="@color/grey"
+                                        android:textSize="12sp"
+                                        tools:ignore="TextSizeCheck" />
+
+                                    <LinearLayout
+                                        android:id="@+id/btnDua"
+                                        android:layout_width="110dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginTop="8dp"
+                                        android:background="@drawable/round_corner_square_5"
+                                        android:gravity="center_vertical"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:contentDescription="doo"
+                                            android:fontFamily="@font/biko_regular_400"
+                                            android:text="All Dua’s"
+                                            android:textColor="@color/white" />
+
+                                        <ImageView
+                                            android:layout_width="14dp"
+                                            android:layout_height="14dp"
+                                            android:src="@drawable/ic_arrow" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btnAllPrayer"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginEnd="25dp">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/ltwhite"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/llPrayerTime"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:baselineAligned="false"
+                                        android:visibility="visible">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/biko_regular_400"
+                                                android:text="Next Prayer at"
+                                                android:textColor="@color/green"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tvNextPrayer"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/biko_bold_700"
+                                                android:text=""
+                                                android:textColor="@color/grey"
+                                                android:textSize="12sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_weight="1">
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginTop="7dp"
+                                                    android:background="@drawable/round_corner_square_7"
+                                                    android:backgroundTint="@color/grey"
+                                                    android:gravity="bottom|center_horizontal"
+                                                    android:paddingBottom="5dp">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:contentDescription="gg"
+                                                        android:fontFamily="@font/biko_regular_400"
+                                                        android:text="All Prayers"
+                                                        android:textColor="@color/white" />
+                                                </LinearLayout>
+
+                                                <ImageView
+                                                    android:layout_width="26dp"
+                                                    android:layout_height="24dp"
+                                                    android:layout_centerHorizontal="true"
+                                                    android:src="@drawable/ic_all_prayers" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/biko_regular_400"
+                                                android:text="After that Prayer"
+                                                android:textAlignment="textEnd"
+                                                android:textColor="@color/green"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tvAfterPrayer"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/biko_bold_700"
+                                                android:text=""
+                                                android:textAlignment="textEnd"
+                                                android:textColor="@color/grey"
+                                                android:textSize="12sp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/llLoadingData"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible">
+
+                                        <ProgressBar
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.45"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:baselineAligned="false"
+                                    android:paddingStart="15dp"
+                                    android:paddingEnd="15dp">
+
+                                    <RelativeLayout
+                                        android:id="@+id/btnQiblaCompass"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_weight="1">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="1dp">
+
+                                            <com.google.android.material.card.MaterialCardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                app:cardCornerRadius="10sp"
+                                                app:cardElevation="0sp"
+                                                app:strokeColor="@color/white2"
+                                                app:strokeWidth="1sp">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:orientation="vertical"
+                                                    android:padding="10sp">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:fontFamily="@font/biko_bold_700"
+                                                        android:text="Qibla"
+                                                        android:textColor="@color/grey"
+                                                        android:textSize="16sp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="5dp"
+                                                        android:fontFamily="@font/biko_regular_400"
+                                                        android:text="Compass"
+                                                        android:textColor="@color/green"
+                                                        android:textSize="12sp" />
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="20sp"
+                                                        android:gravity="end|center_vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:fontFamily="@font/biko_regular_400"
+                                                            android:text="More"
+                                                            android:textColor="@color/green"
+                                                            android:textSize="12sp" />
+
+                                                        <ImageView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginStart="5dp"
+                                                            android:src="@drawable/ic_arrow_right" />
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </com.google.android.material.card.MaterialCardView>
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="4sp"
+                                            android:layout_height="50sp"
+                                            android:layout_centerVertical="true"
+                                            android:background="@drawable/round_corner" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/btnZakat"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5sp"
+                                        android:layout_marginEnd="5sp"
+                                        android:layout_weight="1">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="1sp">
+
+                                            <com.google.android.material.card.MaterialCardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                app:cardCornerRadius="10sp"
+                                                app:cardElevation="0sp"
+                                                app:strokeColor="@color/white2"
+                                                app:strokeWidth="1sp">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:orientation="vertical"
+                                                    android:padding="10sp">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:fontFamily="@font/biko_bold_700"
+                                                        android:text="Zakat"
+                                                        android:textColor="@color/grey"
+                                                        android:textSize="16sp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="5dp"
+                                                        android:fontFamily="@font/biko_regular_400"
+                                                        android:text="Calculation"
+                                                        android:textColor="@color/green"
+                                                        android:textSize="12sp" />
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="20dp"
+                                                        android:gravity="end|center_vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:fontFamily="@font/biko_regular_400"
+                                                            android:text="More"
+                                                            android:textColor="@color/green"
+                                                            android:textSize="12sp"
+                                                            tools:ignore="TextSizeCheck" />
+
+                                                        <ImageView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginStart="5dp"
+                                                            android:src="@drawable/ic_arrow_right" />
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </com.google.android.material.card.MaterialCardView>
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="4dp"
+                                            android:layout_height="50dp"
+                                            android:layout_centerVertical="true"
+                                            android:background="@drawable/round_corner" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/btnNotificationSetting"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_weight="1">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="1dp">
+
+                                            <com.google.android.material.card.MaterialCardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                app:cardCornerRadius="10dp"
+                                                app:cardElevation="0dp"
+                                                app:strokeColor="@color/white2"
+                                                app:strokeWidth="1dp">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:orientation="vertical"
+                                                    android:padding="10dp">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:fontFamily="@font/biko_bold_700"
+                                                        android:text="Setting"
+                                                        android:textColor="@color/grey"
+                                                        android:textSize="16sp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="5sp"
+                                                        android:fontFamily="@font/biko_regular_400"
+                                                        android:text="Notifications"
+                                                        android:textColor="@color/green"
+                                                        android:textSize="12sp" />
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="20sp"
+                                                        android:gravity="end|center_vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:fontFamily="@font/biko_regular_400"
+                                                            android:text="More"
+                                                            android:textColor="@color/green"
+                                                            android:textSize="12sp" />
+
+                                                        <ImageView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginStart="5sp"
+                                                            android:src="@drawable/ic_arrow_right" />
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </com.google.android.material.card.MaterialCardView>
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="4dp"
+                                            android:layout_height="50dp"
+                                            android:layout_centerVertical="true"
+                                            android:background="@drawable/round_corner" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150sp"
+                                    android:layout_marginTop="10sp"
+                                    android:background="@drawable/img_hajj_journey"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:paddingStart="15sp"
+                                    android:paddingEnd="15sp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/biko_regular_400"
+                                        android:text="Hajj Journey"
+                                        android:textColor="@color/white"
+                                        android:textSize="24sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10sp"
+                                        android:fontFamily="@font/biko_regular_400"
+                                        android:text="Details about Hajj Pilgrimage\nwith Map"
+                                        android:textColor="@color/green" />
+
+                                    <LinearLayout
+                                        android:id="@+id/btnHajj"
+                                        android:layout_width="130sp"
+                                        android:layout_height="35sp"
+                                        android:layout_marginTop="10sp"
+                                        android:background="@drawable/round_corner_square_5"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/biko_regular_400"
+                                            android:text="Start Journey"
+                                            android:textColor="@color/white" />
+
+                                        <ImageView
+                                            android:layout_width="14sp"
+                                            android:layout_height="14sp"
+                                            android:layout_marginStart="10sp"
+                                            android:src="@drawable/ic_arrow" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15sp"
+                                    android:paddingStart="15sp"
+                                    android:paddingEnd="15sp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="160dp"
+                                            android:layout_height="160sp"
+                                            app:cardCornerRadius="15sp"
+                                            app:cardElevation="0sp">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:scaleType="centerCrop"
+                                                    android:src="@drawable/img_athkar_calendar" />
+                                            </LinearLayout>
+                                        </androidx.cardview.widget.CardView>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/biko_bold_700"
+                                            android:text="Daily Athkar &amp;\n Islamic Hijri Calendar"
+                                            android:textColor="@color/grey"
+                                            android:textSize="18sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="15sp">
+
+                                            <LinearLayout
+                                                android:id="@+id/btnAthkar"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:gravity="center_vertical"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/biko_regular_400"
+                                                    android:text="Daily"
+                                                    android:textColor="@color/green"
+                                                    android:textSize="12sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
+                                                    android:fontFamily="@font/biko_bold_700"
+                                                    android:text="Athkar"
+                                                    android:textColor="@color/grey"
+                                                    android:textSize="16sp" />
+
+                                                <ImageView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="8dp"
+                                                    android:background="@drawable/round_border_square_green"
+                                                    android:padding="2dp"
+                                                    android:src="@drawable/ic_arrow_right"
+                                                    app:tint="@color/dgreen" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/btnHijriCalender"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/biko_regular_400"
+                                                    android:text="Calendar"
+                                                    android:textColor="@color/green"
+                                                    android:textSize="12sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
+                                                    android:fontFamily="@font/biko_bold_700"
+                                                    android:text="Hijri"
+                                                    android:textColor="@color/grey"
+                                                    android:textSize="16sp" />
+
+                                                <ImageView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="8sp"
+                                                    android:background="@drawable/round_border_square_green"
+                                                    android:padding="2sp"
+                                                    android:src="@drawable/ic_arrow_right"
+                                                    app:tint="@color/dgreen" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15sp"
+                                    android:orientation="vertical"
+                                    android:paddingStart="15sp"
+                                    android:paddingEnd="15sp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/biko_regular_400"
+                                        android:text="Other’s"
+                                        android:textColor="@color/dgreen"
+                                        android:textSize="24sp" />
+
+                                    <LinearLayout
+                                        android:id="@+id/AlQuran"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10sp"
+                                        android:baselineAligned="false">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_quran" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/biko_regular_400"
+                                                android:text="Read book of"
+                                                android:textColor="@color/green"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:fontFamily="@font/biko_bold_700"
+                                                android:text="Quran"
+                                                android:textColor="@color/grey"
+                                                android:textSize="16sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:baselineAligned="false"
+                                            android:gravity="center">
+
+                                            <LinearLayout
+                                                android:layout_width="100sp"
+                                                android:layout_height="35sp"
+                                                android:background="@drawable/round_corner_square_5"
+                                                android:backgroundTint="@color/ltwhite"
+                                                android:gravity="center"
+                                                tools:ignore="UselessParent">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/biko_regular_400"
+                                                    android:text="Read"
+                                                    android:textColor="@color/grey" />
+
+                                                <ImageView
+                                                    android:layout_width="14sp"
+                                                    android:layout_height="14sp"
+                                                    android:layout_marginStart="20sp"
+                                                    android:baselineAligned="false"
+                                                    android:src="@drawable/ic_arrow" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/btnTabish"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        tools:ignore="DisableBaselineAlignment">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_count_tasbih" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0sp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="10sp"
+                                            android:layout_marginEnd="10sp"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/biko_regular_400"
+                                                android:text="Count the"
+                                                android:textColor="@color/green"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:fontFamily="@font/biko_bold_700"
+                                                android:text="Tasbih"
+                                                android:textColor="@color/grey"
+                                                android:textSize="16sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center">
+
+                                            <LinearLayout
+                                                android:layout_width="100dp"
+                                                android:layout_height="35dp"
+                                                android:background="@drawable/round_corner_square_5"
+                                                android:backgroundTint="@color/ltwhite"
+                                                android:gravity="center"
+                                                tools:ignore="UselessParent">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/biko_regular_400"
+                                                    android:text="Count"
+                                                    android:textColor="@color/grey" />
+
+                                                <ImageView
+                                                    android:layout_width="14sp"
+                                                    android:layout_height="14sp"
+                                                    android:layout_marginStart="20sp"
+                                                    android:baselineAligned="false"
+                                                    android:src="@drawable/ic_arrow" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/btnDua99AllahName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10sp"
+                                        tools:ignore="DisableBaselineAlignment">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_99_name_of_allah" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="10sp"
+                                            android:layout_marginEnd="10sp"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/biko_regular_400"
+                                                android:text="99 Name of"
+                                                android:textColor="@color/green"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:fontFamily="@font/biko_bold_700"
+                                                android:text="Allah"
+                                                android:textColor="@color/grey"
+                                                android:textSize="16sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center">
+
+                                            <LinearLayout
+                                                android:layout_width="100dp"
+                                                android:layout_height="35dp"
+                                                android:background="@drawable/round_corner_square_5"
+                                                android:backgroundTint="@color/ltwhite"
+                                                android:gravity="center"
+                                                tools:ignore="UselessParent">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/biko_regular_400"
+                                                    android:text="Name’s"
+                                                    android:textColor="@color/grey" />
+
+                                                <ImageView
+                                                    android:layout_width="14dp"
+                                                    android:layout_height="14dp"
+                                                    android:layout_marginStart="20dp"
+                                                    android:src="@drawable/ic_arrow" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

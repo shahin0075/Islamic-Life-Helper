@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()  // Use mavenCentral instead of jcenter
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath 'com.google.gms:google-services:4.4.2'
+        // Consider upgrading the Gradle plugin to a more recent version
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()  // Remove jcenter
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.google.com' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

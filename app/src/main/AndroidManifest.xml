@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:name="com.itamadersomaj.islamiclifehelper.Appcompany.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/islamiclife"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IslamicDua"
+        android:usesCleartextTraffic="true">
+
+        <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true" />
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/map_key" />
+
+        <activity
+            android:name="com.itamadersomaj.islamiclifehelper.Appcompany.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.itamadersomaj.islamiclifehelper.Appcompany.Privacy_Policy_activity" android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.MainActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.TodayDuaActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.NotificationActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.MapActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.HajjDetailActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.ZakatActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.HajjJourneyActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.DuaFavoriteActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.QuranFavoriteActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.PrayerAlarmActivity" android:screenOrientation="portrait" android:showOnLockScreen="true" android:showWhenLocked="true" android:turnScreenOn="true" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.AllPrayerActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.SelectDhikrActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.TasbihCounterActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.QuranActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.ChangeLocationActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.QuranCategoryActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.AllahNameActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.DuaActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.DuaTopicActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.HijriCalender.HijriCalenderActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.CompassActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.PrayerTimeConfigureActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.AthkarActivity" android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi" />
+        <activity android:name="com.itamadersomaj.islamiclifehelper.DuaCategoryActivity" android:exported="true" />
+
+
+        <service android:name="com.itamadersomaj.islamiclifehelper.Service.FetchAddressIntentServices" />
+        <service android:name="com.itamadersomaj.islamiclifehelper.Service.PrayerTimeService" />
+
+        <receiver android:name="com.itamadersomaj.islamiclifehelper.Receiver.BootReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
+        </provider>
+
+
+    </application>
+</manifest>

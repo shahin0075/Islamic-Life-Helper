@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@drawable/bg_img"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/img_prayer_img" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/round_corner_square_20"
+            android:layout_width="280dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/ltwhite">
+
+            <TextView
+                android:textSize="32dp"
+                android:textColor="@color/grey"
+                android:id="@+id/tvPrayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fajr"
+                android:fontFamily="@font/biko_regular_400" />
+
+            <TextView
+                android:textSize="50dp"
+                android:textColor="@color/grey"
+                android:id="@+id/tvPrayerTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="10:30 PM"
+                android:fontFamily="@font/biko_regular_400" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/btnStop"
+            android:background="@drawable/round_corner_square"
+            android:padding="12dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#f3ce53">
+
+            <TextView
+                android:textColor="#444f50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:fontFamily="@font/biko_bold_700" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

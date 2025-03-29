@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/round_corner_square_20"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:backgroundTint="@color/ltwhite">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ltwhite"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/green"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/grey"
+                            android:id="@+id/tvSelect"
+                            android:layout_width="74dp"
+                            android:layout_height="wrap_content"
+                            android:text="Select this"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/biko_regular_400" />
+
+                        <ImageView
+                            android:id="@+id/ivSelect"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/round_border"
+                            android:layout_marginStart="15dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <TextView
+                android:textSize="18dp"
+                android:id="@+id/tvDhikrArabic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ"
+                android:fontFamily="@font/biko_regular_400"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <View
+                android:background="#bebebe"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Translation"
+                android:fontFamily="@font/biko_regular_400" />
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@color/grey"
+                android:id="@+id/tvDhikrTranslation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Subhan Allah"
+                android:fontFamily="@font/biko_regular_400" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:textColor="@color/green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="English Meaning"
+                android:fontFamily="@font/biko_regular_400" />
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@color/grey"
+                android:id="@+id/tvDhikrEnglishMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Glory be to Allah"
+                android:fontFamily="@font/biko_regular_400" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="navtextsize2">15sp</dimen>
+    <dimen name="islamicmonthtextsize2">14sp</dimen>
+    <dimen name="navtextsize1">14sp</dimen>
+</resources>
