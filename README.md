@@ -63,4 +63,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-For any queries or support, you can reach out to **Mohammad Shaheenur Rahman** at **[your email address]**.
+For any queries or support, you can reach out to **Mohammad Shaheenur Rahman** at **[shahinalam3546@gmail.com]**.
